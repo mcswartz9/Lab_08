@@ -1,0 +1,20 @@
+p
+{
+	color: black;
+	font-size: 14pt;
+}
+
+p.paragraph
+{
+	color: black;
+	font-size: 14pt;
+	border-style: solid;
+	border-color: black;
+	border-width: 3pt;
+	background-color: white;
+}
+
+button
+{
+	font-size: 14pt;
+}
