@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+	<html>
+		<title>Exercise 2: Slide Show</title>
+			<body>
+				<center><p>Exercise 2: Slide Show</p></center>
+
+				<div class="mySlides">
+  					<center><img src="Puppy1.jpeg" height="600" width="600"></center>
+				</div>
+
+				<div class="mySlides">
+  					<center><img src="Puppy2.jpeg" height="600" width="600"></center>
+				</div>
+
+				<div class="mySlides">
+  					<center><img src="Puppy3.jpeg" height="600" width="600"></center>
+				</div>
+
+				<div class="mySlides">
+  					<center><img src="Puppy4.jpeg" height="600" width="600"></center>
+				</div>
+
+				<div class="mySlides">
+  					<center><img src="Puppy5.jpeg" height="600" width="600"></center>
+				</div>
+				<br>
+				<center>
+					<button onclick="clickSlides(-1);">Previous</button>
+					<button onclick="clickSlides(1);">Next</button>
+				</center>
+				
+				<script>
+					let slideIndex = 1;
+					runShow(slideIndex);
+
+					function clickSlides(input) {	
+  						runShow(slideIndex += input);
+					}
+
+					function runShow(input) {
+  						let i;
+  						let slides = document.getElementsByClassName("mySlides");
+  						if (input > slides.length) {
+  							slideIndex = 1;
+  						}    
+  						if (input < 1) {
+  							slideIndex = slides.length;
+  						}
+  						for (i = 0; i < slides.length; i++) {
+    						slides[i].style.display = "none";  
+  						}
+  						slides[slideIndex-1].style.display = "block";  
+					}
+				</script>
+
+			</body>
+	</html> 
+
+
